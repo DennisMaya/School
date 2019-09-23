@@ -1,0 +1,11 @@
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\bin\Debug\netcoreapp2.1\Assignment3Problem2.deps.json
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\bin\Debug\netcoreapp2.1\Assignment3Problem2.runtimeconfig.json
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\bin\Debug\netcoreapp2.1\Assignment3Problem2.runtimeconfig.dev.json
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\bin\Debug\netcoreapp2.1\Assignment3Problem2.dll
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\bin\Debug\netcoreapp2.1\Assignment3Problem2.pdb
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\obj\Debug\netcoreapp2.1\Assignment3Problem2.csprojAssemblyReference.cache
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\obj\Debug\netcoreapp2.1\Assignment3Problem2.csproj.CoreCompileInputs.cache
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\obj\Debug\netcoreapp2.1\Assignment3Problem2.AssemblyInfoInputs.cache
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\obj\Debug\netcoreapp2.1\Assignment3Problem2.AssemblyInfo.cs
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\obj\Debug\netcoreapp2.1\Assignment3Problem2.dll
+C:\Users\mayad\source\repos\Assignment3Problem2\Assignment3Problem2\obj\Debug\netcoreapp2.1\Assignment3Problem2.pdb

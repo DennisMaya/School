@@ -1,0 +1,16 @@
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\bin\Debug\Assignment4Problem1.exe.config
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\bin\Debug\Assignment4Problem1.exe
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\bin\Debug\Assignment4Problem1.pdb
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.csprojAssemblyReference.cache
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\MainWindow.g.cs
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\App.g.cs
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1_MarkupCompile.cache
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1_MarkupCompile.lref
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\MainWindow.baml
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.g.resources
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.Properties.Resources.resources
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.csproj.GenerateResource.cache
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.csproj.CoreCompileInputs.cache
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.exe
+C:\Users\mayad\OneDrive\Desktop\VersionControl\CECS475\Assignment4Problem1\Assignment4Problem1\obj\Debug\Assignment4Problem1.pdb
