@@ -2,7 +2,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using Assignment4Problem2.Model;
-using Assignment4Problem2.Views;
+using Assignment4Problem2.View;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -36,7 +36,7 @@ namespace Assignment4Problem2.ViewModel
             database = new MemberDB(members);
             members = database.GetMemberships();
             AddCommand = new RelayCommand(AddMethod);
-            ExitCommand = new RelayCommand<Window>(ExitMethod);
+            ExitCommand = new RelayCommand<IClosable>(ExitMethod);
             ChangeCommand = new RelayCommand(ChangeMethod);
             Messenger.Default.Register<MessageMember>(this, ReceiveMember);
             Messenger.Default.Register<NotificationMessage>(this, ReceiveMessage);
@@ -45,7 +45,7 @@ namespace Assignment4Problem2.ViewModel
         /// The command that triggers adding a new member.
         /// </summary>
         public ICommand AddCommand { get; private set; }
-        public RelayCommand<Window> ExitCommand { get; private set; }
+        public RelayCommand<IClosable> ExitCommand { get; private set; }
         public ICommand ChangeCommand { get; private set; }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Assignment4Problem2.ViewModel
         /// Closes the application.
         /// </summary>
         /// <param name="window">The window to close.</param>
-        public void ExitMethod(Window window)
+        public void ExitMethod(IClosable window)
         {
             if (window != null)
             {
@@ -104,14 +104,15 @@ namespace Assignment4Problem2.ViewModel
             if (m.Message == "Update")
             {
                 MemberList[members.IndexOf(SelectedMember)] = m;
-                this.RaisePropertyChanged(()=>this.MemberList);
+                RaisePropertyChanged(() => MemberList);
+                Messenger.Default.Send("Member Updated");
                 database.SaveMemberships();
             }
             else if (m.Message == "Add")
             {
                 members.Add(m);
-                this.RaisePropertyChanged(()=>this.MemberList);
-                Messenger.Default.Send<NotificationMessage>(new NotificationMessage("Member Saved"));
+                RaisePropertyChanged( () => MemberList);
+                Messenger.Default.Send("Member Saved");
                 database.SaveMemberships();
             }
         }
@@ -124,7 +125,7 @@ namespace Assignment4Problem2.ViewModel
             if (msg.Notification == "Delete")
             {
                 MemberList.Remove(SelectedMember);
-                this.RaisePropertyChanged(()=>this.MemberList);
+                RaisePropertyChanged(() => MemberList);
                 database.SaveMemberships();
             }
         }

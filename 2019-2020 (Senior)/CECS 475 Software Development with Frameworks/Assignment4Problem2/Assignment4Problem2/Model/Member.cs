@@ -22,6 +22,8 @@ namespace Assignment4Problem2.Model
 
         private string email;
 
+        private string gymMember;
+
         private int TEXT_LIMIT = 20;
 
         public Member() { }
@@ -33,9 +35,9 @@ namespace Assignment4Problem2.Model
         /// <param name="mail">The member's e-mail.</param>
         public Member(string fName, string lName, string mail)
         {
-            firstName = fName;
-            lastName = lName;
-            email = mail;
+            FirstName = fName;
+            LastName = lName;
+            Email = mail;
         }
 
         /// <summary>
@@ -118,8 +120,18 @@ namespace Assignment4Problem2.Model
         /// <returns>A concatenation of the member's first name, last name, and email.</returns>
         public override string ToString()
         {
-            return FirstName + " " + LastName + " ," + Email; 
-
+            return FirstName + " " + LastName + " ," + Email;
+        }
+        public string GymMember
+        {
+            get
+            {
+                return gymMember;
+            }
+            set
+            {
+                gymMember = FirstName + " " + LastName + " ," + Email;
+            }
         }
     }
 }

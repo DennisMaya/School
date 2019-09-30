@@ -19,6 +19,9 @@ namespace Assignment4Problem2.Model
             /// <param name="message">The extra description</param>
          public MessageMember(string fName, string lName, string mail, string message):base(fName, lName, mail)
          {
+            FirstName = fName;
+            LastName = lName;
+            Email = mail;
             Message = message;
          }
          /// <summary>

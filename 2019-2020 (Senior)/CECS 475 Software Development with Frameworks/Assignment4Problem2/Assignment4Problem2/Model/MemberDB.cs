@@ -20,7 +20,7 @@ namespace Assignment4Problem2.Model
         /// <summary>
         /// Where the database is stored.
         /// </summary>
-        private const string filepath = "C:/Users/17143/Desktop/members.txt";
+        private const string filepath = "C:/Users/mayad/Desktop/members.txt";
         /// <summary>
         /// Creates a new member database.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Assignment4Problem2.Model
             foreach (Member member in members)
             {
                 output.WriteLine(member.FirstName + " " + member.LastName + member.Email);
-                Console.WriteLine(member.FirstName + " " + member.LastName + member.Email);
+                //Console.WriteLine(member.FirstName + " " + member.LastName + member.Email);
             }
             output.Close();
         }

@@ -7,7 +7,10 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
+using Assignment4Problem2.View;
+
 namespace Assignment4Problem2.ViewModel
+
 {
     /// <summary>
     /// The VM for adding users to the list.
@@ -54,6 +57,9 @@ namespace Assignment4Problem2.ViewModel
                 {
                     Messenger.Default.Send(new MessageMember(EnteredFName,EnteredLName,EnteredEmail,"Add"));
                     window.Close();
+                    EnteredFName = "";
+                    EnteredLName = "";
+                    EnteredEmail = "";
                 }
             }
             catch (ArgumentException)

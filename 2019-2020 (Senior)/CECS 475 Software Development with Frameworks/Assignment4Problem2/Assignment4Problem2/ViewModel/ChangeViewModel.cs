@@ -51,7 +51,7 @@ namespace Assignment4Problem2.ViewModel
         {
             try
             {
-                Messenger.Default.Send<MessageMember>(new MessageMember(enteredFName,EnteredLName,EnteredEmail,"Update"));
+                Messenger.Default.Send(new MessageMember(EnteredFName,EnteredLName,EnteredEmail,"Update"));
                 window.Close();
             }
             catch (ArgumentException)

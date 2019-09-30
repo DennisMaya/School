@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Assignment4Problem2.ViewModel;
 
-namespace Assignment4Problem2.Views
+namespace Assignment4Problem2.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ChangeWindow : Window,IClosable
     {
-        public MainWindow()
+        public ChangeWindow()
         {
             InitializeComponent();
+            //this.DataContext = new ChangeViewModel();
         }
     }
 }

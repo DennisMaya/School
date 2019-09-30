@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment4Problem2.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Assignment4Problem2.Views
+namespace Assignment4Problem2.View
 {
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class ChangeWindow : Window,IClosable
+    public partial class AddWindow : Window,IClosable
     {
-        public ChangeWindow()
+        public AddWindow()
         {
             InitializeComponent();
+            //this.DataContext = new AddViewModel();
         }
     }
 }
