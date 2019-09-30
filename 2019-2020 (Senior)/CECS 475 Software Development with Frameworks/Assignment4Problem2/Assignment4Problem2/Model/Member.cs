@@ -122,16 +122,5 @@ namespace Assignment4Problem2.Model
         {
             return FirstName + " " + LastName + " ," + Email;
         }
-        public string GymMember
-        {
-            get
-            {
-                return gymMember;
-            }
-            set
-            {
-                gymMember = FirstName + " " + LastName + " ," + Email;
-            }
-        }
     }
 }

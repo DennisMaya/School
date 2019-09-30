@@ -20,7 +20,7 @@ namespace Assignment4Problem2.Model
         /// <summary>
         /// Where the database is stored.
         /// </summary>
-        private const string filepath = "C:/Users/mayad/Desktop/members.txt";
+        private const string filepath = "C:/Users/mayad/OneDrive/Desktop/members.txt";
         /// <summary>
         /// Creates a new member database.
         /// </summary>
@@ -38,6 +38,20 @@ namespace Assignment4Problem2.Model
             try
             {
                 StreamReader input = new StreamReader(new FileStream(filepath,FileMode.OpenOrCreate, FileAccess.Read));
+                string[] lines = System.IO.File.ReadAllLines(@"C:/Users/mayad/OneDrive/Desktop/members.txt");
+                string fname;
+                string lname;
+                string email;
+                char[] comma = { ',' };
+                foreach (string line in lines)
+                {
+                    string[] items = line.Split(' ');
+                    fname = items[0];
+                    lname = items[1];
+                    email = items[2].TrimStart(comma); ;
+
+                    members.Add(new MessageMember(fname,lname,email,"Add"));
+                }
                 input.Close();
             }
             catch (FileNotFoundException)
@@ -58,8 +72,7 @@ namespace Assignment4Problem2.Model
             StreamWriter output = new StreamWriter(new FileStream(filepath,FileMode.Create, FileAccess.Write));
             foreach (Member member in members)
             {
-                output.WriteLine(member.FirstName + " " + member.LastName + member.Email);
-                //Console.WriteLine(member.FirstName + " " + member.LastName + member.Email);
+                output.WriteLine(member.ToString());
             }
             output.Close();
         }
