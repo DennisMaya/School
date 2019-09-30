@@ -8,12 +8,12 @@
      xmlns:local="clr-namespace:Assignment4Problem2"
      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
      mc:Ignorable="d"
-     DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+     DataContext="{Binding Source={StaticResource Locator}, Path= Main}"
      Title="Gym Memberships" Height="350" Width="525">
     <Grid Background="#FFECEAEA">
         <Button x:Name="button" Content="Add" Grid.Row ="1" Grid.Column ="1" Command="{Binding AddCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,50,0,0"/>
         <Button x:Name="button2" Content="Exit" Grid.Row ="1" Grid.Column ="1" Command="{Binding ExitCommand}" CommandParameter="{Binding ElementName=mainWindow}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="0,0,0,50"/>
-        <ListBox x:Name="listBox" ItemsSource="{Binding MemberList}" SelectedItem ="{Binding SelectedMember.GymMember}" Grid.Row ="1" Grid.Column ="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="220" Width="322">
+        <ListBox x:Name="listBox" ItemsSource="{Binding MemberList}" SelectedItem ="{Binding SelectedMember}" Grid.Row ="1" Grid.Column ="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="220" Width="322">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <i:InvokeCommandAction Command="{Binding ChangeCommand}"/>

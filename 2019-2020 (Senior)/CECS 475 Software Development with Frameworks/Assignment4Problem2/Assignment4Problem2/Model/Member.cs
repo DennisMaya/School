@@ -116,12 +116,10 @@ namespace Assignment4Problem2.Model
         /// Text to be displayed in the list box.
         /// </summary>
         /// <returns>A concatenation of the member's first name, last name, and email.</returns>
-        public string GymMember
+        public override string ToString()
         {
-            get
-            {
-                return FirstName + " " + LastName + " ," + Email; 
-            }
+            return FirstName + " " + LastName + " ," + Email; 
+
         }
     }
 }
