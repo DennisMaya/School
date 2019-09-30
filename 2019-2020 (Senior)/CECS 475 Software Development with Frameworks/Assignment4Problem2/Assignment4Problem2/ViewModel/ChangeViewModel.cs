@@ -31,8 +31,9 @@ namespace Assignment4Problem2.ViewModel
         /// </summary>
         public ChangeViewModel()
         {
-            _____________________________________
-        Messenger.Default.Register<Member>(this, ___________________ -);
+            UpdateCommand = new RelayCommand<IClosable>(UpdateMethod);
+            DeleteCommand = new RelayCommand<IClosable>(DeleteMethod);
+            Messenger.Default.Register<Member>(this, GetSelected);
         }
         /// <summary>
         /// The command that triggers saving the filled out member data.
@@ -50,18 +51,18 @@ namespace Assignment4Problem2.ViewModel
         {
             try
             {
-                Messenger.Default.Send(_________________________________________ -));
+                Messenger.Default.Send<MessageMember>(new MessageMember(enteredFName,EnteredLName,EnteredEmail,"Update"));
                 window.Close();
             }
             catch (ArgumentException)
             {
                 MessageBox.Show("Fields must be under 25 characters.", "Entry Error");
             }
-            catch (__________________________n)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Fields cannot be empty.", "Entry Error");
             }
-            catch (______________________n)
+            catch (FormatException)
             {
                 MessageBox.Show("Must be a valid e-mail address.", "Entry Error");
             }
@@ -74,7 +75,7 @@ namespace Assignment4Problem2.ViewModel
         {
             if (window != null)
             {
-                Messenger.Default.Send(______________________________________--));
+                Messenger.Default.Send(new NotificationMessage("Delete"));
                 window.Close();
             }
         }
@@ -84,7 +85,9 @@ namespace Assignment4Problem2.ViewModel
         /// <param name="m">The member data to fill in.</param>
         public void GetSelected(Member m)
         {
-            ___________________________
+            EnteredEmail = m.Email;
+            EnteredFName = m.FirstName;
+            EnteredLName = m.LastName;
         }
         /// <summary>
         /// The currently entered first name in the change window.
@@ -99,6 +102,36 @@ namespace Assignment4Problem2.ViewModel
             {
                 enteredFName = value;
                 RaisePropertyChanged("EnteredFName");
+            }
+        }
+        /// <summary>
+        /// The currently entered last name in the add window.
+        /// </summary>
+        public string EnteredLName
+        {
+            get
+            {
+                return enteredLName;
+            }
+            set
+            {
+                enteredLName = value;
+                RaisePropertyChanged("EnteredLName");
+            }
+        }
+        /// <summary>
+        /// The currently entered email in the add window.
+        /// </summary>
+        public string EnteredEmail
+        {
+            get
+            {
+                return enteredEmail;
+            }
+            set
+            {
+                enteredEmail = value;
+                RaisePropertyChanged("EnteredEmail");
             }
         }
     }

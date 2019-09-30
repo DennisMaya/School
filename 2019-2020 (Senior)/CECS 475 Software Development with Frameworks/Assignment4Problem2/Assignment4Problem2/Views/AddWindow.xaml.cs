@@ -18,9 +18,9 @@ namespace Assignment4Problem2.Views
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class AddWindow : Window,IClosable
     {
-        public UserControl1()
+        public AddWindow()
         {
             InitializeComponent();
         }

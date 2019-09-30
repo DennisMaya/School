@@ -2,7 +2,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using Assignment4Problem2.Model;
-using Assignment4Problem2.View;
+using Assignment4Problem2.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -91,7 +91,7 @@ namespace Assignment4Problem2.ViewModel
             {
                 ChangeWindow change = new ChangeWindow();
                 change.Show();
-                Messenger.Default.Send(__________________________);
+                Messenger.Default.Send(SelectedMember);
             }
         }
         /// <summary>
@@ -103,13 +103,16 @@ namespace Assignment4Problem2.ViewModel
         {
             if (m.Message == "Update")
             {
-                _____________________________________
-            database.SaveMemberships();
+                MemberList[members.IndexOf(SelectedMember)] = m;
+                this.RaisePropertyChanged(()=>this.MemberList);
+                database.SaveMemberships();
             }
             else if (m.Message == "Add")
             {
-                ______________________________________
-            database.SaveMemberships();
+                members.Add(m);
+                this.RaisePropertyChanged(()=>this.MemberList);
+                Messenger.Default.Send<NotificationMessage>(new NotificationMessage("Member Saved"));
+                database.SaveMemberships();
             }
         }
         /// <summary>
@@ -120,8 +123,9 @@ namespace Assignment4Problem2.ViewModel
         {
             if (msg.Notification == "Delete")
             {
-                _______________________________________________
-            database.SaveMemberships();
+                MemberList.Remove(SelectedMember);
+                this.RaisePropertyChanged(()=>this.MemberList);
+                database.SaveMemberships();
             }
         }
         /// <summary>

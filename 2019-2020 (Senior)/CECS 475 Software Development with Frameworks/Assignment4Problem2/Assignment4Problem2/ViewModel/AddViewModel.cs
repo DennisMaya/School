@@ -32,7 +32,7 @@ namespace Assignment4Problem2.ViewModel
         public AddViewModel()
         {
             SaveCommand = new RelayCommand<IClosable>(SaveMethod);
-            __________________________________________________;
+            CancelCommand = new RelayCommand<IClosable>(CancelMethod);
         }
         /// <summary>
         /// The command that triggers saving the filled out member data.
@@ -52,7 +52,7 @@ namespace Assignment4Problem2.ViewModel
             {
                 if (window != null)
                 {
-                    Messenger.Default.Send(_______________________________________));
+                    Messenger.Default.Send(new MessageMember(EnteredFName,EnteredLName,EnteredEmail,"Add"));
                     window.Close();
                 }
             }
@@ -93,6 +93,35 @@ namespace Assignment4Problem2.ViewModel
             {
                 enteredFName = value;
                 RaisePropertyChanged("EnteredFName");
+            }
+        }
+        /// <summary>
+        /// The currently entered last name in the add window.
+        /// </summary>
+        public string EnteredLName
+        {
+            get
+            {
+                return enteredLName;
+            }
+            set
+            {
+                enteredLName = value;
+                RaisePropertyChanged("EnteredLName");
+            }
+        }/// <summary>
+        /// The currently entered email in the add window.
+        /// </summary>
+        public string EnteredEmail
+        {
+            get
+            {
+                return enteredEmail;
+            }
+            set
+            {
+                enteredEmail = value;
+                RaisePropertyChanged("EnteredEmail");
             }
         }
     }
