@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mayad\\source\\repos\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj": {}
+    "C:\\Users\\mayad\\OneDrive\\Desktop\\School Work\\2019-2020 (Senior)\\CECS 475 Software Development with Frameworks\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mayad\\source\\repos\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj": {
+    "C:\\Users\\mayad\\OneDrive\\Desktop\\School Work\\2019-2020 (Senior)\\CECS 475 Software Development with Frameworks\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mayad\\source\\repos\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj",
+        "projectUniqueName": "C:\\Users\\mayad\\OneDrive\\Desktop\\School Work\\2019-2020 (Senior)\\CECS 475 Software Development with Frameworks\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj",
         "projectName": "Assignment3Problem2",
-        "projectPath": "C:\\Users\\mayad\\source\\repos\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj",
+        "projectPath": "C:\\Users\\mayad\\OneDrive\\Desktop\\School Work\\2019-2020 (Senior)\\CECS 475 Software Development with Frameworks\\Assignment3Problem2\\Assignment3Problem2\\Assignment3Problem2.csproj",
         "packagesPath": "C:\\Users\\mayad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mayad\\source\\repos\\Assignment3Problem2\\Assignment3Problem2\\obj\\",
+        "outputPath": "C:\\Users\\mayad\\OneDrive\\Desktop\\School Work\\2019-2020 (Senior)\\CECS 475 Software Development with Frameworks\\Assignment3Problem2\\Assignment3Problem2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

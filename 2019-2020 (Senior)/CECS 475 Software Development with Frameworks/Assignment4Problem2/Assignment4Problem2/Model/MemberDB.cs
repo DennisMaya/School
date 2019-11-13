@@ -45,6 +45,7 @@ namespace Assignment4Problem2.Model
                 char[] comma = { ',' };
                 foreach (string line in lines)
                 {
+                    if (line == "") break;
                     string[] items = line.Split(' ');
                     fname = items[0];
                     lname = items[1];
